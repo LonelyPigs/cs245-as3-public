@@ -1,0 +1,18 @@
+RDBMS 关系型数据库
+
+SQL-》RDBMS-》parser-》optimizer-》executor
+
+parser：词法分析 语法分析 语义分析
+优化器：条件化简 表连接优化 scan优化（唯一索引 普通索引 全表扫描） 基于代价的优化
+执行器：火山模型-》向量化batch
+
+buffer pool
+hashmap<page_id, block*> 每个bucket一个block链表
+LRU
+page：变长字段列表 null值标志位 header row_id trx_id roll_ptr col1 ... colN
+B+树 范围查找
+
+A 原子性——undo log
+C 一致性
+I 隔离性 读读：共享锁 写写：排他锁 MVCC
+D 持久性 redo log

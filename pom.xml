@@ -22,7 +22,7 @@
         <!--
             Java source/target to use for compilation.
           -->
-        <javac.target>11</javac.target>
+        <javac.target>8</javac.target>
 
         <!--
             Name of the Uber-JAR to generate.
